@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  git-server:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "9010:80"
+    volumes:
+      - .:/var/www/git/repo
